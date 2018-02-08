@@ -16,35 +16,34 @@ public class Distance
 	public Distance()
 	{
 
-
-
 	}
 
 	public Distance(int x1, int y1, int x2, int y2)
 	{
-
-
-
+		xOne = x1;
+		yOne = y1;
+		xTwo = x2;
+		yTwo = y2;
 	}
 
 	public void setCoordinates(int x1, int y1, int x2, int y2)
 	{
-
+		xOne = x1;
+		yOne = y1;
+		xTwo = x2;
+		yTwo = y2;
 
 
 	}
 
 	public void calcDistance()
 	{
-
-
+		distance = sqrt(((double)xOne-(double)xTwo)*((double)xOne-(double)xTwo) + ((double)yOne-(double)yTwo)*((double)yOne-(double)yTwo));
 
 	}
 
 	public void print( )
 	{
-
-
-
+		System.out.println("Distance is " + distance);
 	}
 }

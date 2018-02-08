@@ -4,7 +4,7 @@
 //Class - Period 2
 //Lab  - Lab02e
 
-import static java.lang.System.*;
+//import static java.lang.System.*;
 import java.util.Scanner;
 
 public class Lab02e

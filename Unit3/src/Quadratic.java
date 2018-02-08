@@ -34,13 +34,13 @@ public class Quadratic
 
 	public void calcRoots( )
 	{
-		rootOne = (-b + sqrt(b*b-4*a*c))/(2*a);
-		rootTwo = (-b - sqrt(b*b-4*a*c))/(2*a);
+		rootOne = (-(double)b + sqrt((double)b*(double)b-4*(double)a*(double)c))/(2*(double)a);
+		rootTwo = (-(double)b - sqrt((double)b*(double)b-4*(double)a*(double)c))/(2*(double)a);
 	}
 
 	public void print( )
 	{
 		System.out.println("Root One: " + rootOne);
-		System.out.println("Root One: " + rootTwo);
+		System.out.println("Root Two: " + rootTwo);
 	}
 }

@@ -1,0 +1,31 @@
+//© A+ Computer Science  -  www.apluscompsci.com
+//Name -
+//Date -
+//Class -
+//Lab  -
+
+import static java.lang.System.*;
+import java.lang.Math;
+import java.util.Scanner;
+
+public class Lab08i
+{
+	public static void main ( String[] args )
+	{
+		Scanner s = new Scanner(System.in);
+		Prime p = new Prime();
+		do{
+			System.out.println("Enter number: ");
+			p.setPrime(s.nextInt());
+			System.out.println(p);
+		}while(true);
+
+		
+		
+		
+		
+		
+		
+		
+	}	
+}
