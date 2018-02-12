@@ -14,6 +14,7 @@ public class Lab09f
 		Scanner s = new Scanner(System.in);
 		LetterRemover p = new LetterRemover();
 		String i;
+		char c = 'c';
 		do{
 			System.out.println("Enter sentence or enter Quit: ");
 			i = s.next();
