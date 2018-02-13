@@ -48,7 +48,7 @@ public class StringChecker
 
  	public String toString()
  	{
- 		System.out.println(word);
- 		return "\n\n";
+ 		//System.out.println(word);
+ 		return word;
 	}
 }

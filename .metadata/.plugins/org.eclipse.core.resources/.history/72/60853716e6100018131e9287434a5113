@@ -1,0 +1,84 @@
+//© A+ Computer Science  -  www.apluscompsci.com
+//Name -
+//Date -
+//Class -
+//Lab  -
+
+import java.lang.System;
+import java.lang.Math;
+import java.util.Scanner;
+
+public class Grades
+{
+	//instance variables
+	double[] grades; 
+
+	//constructor
+	public Grades(){
+		
+	}
+
+	public Grades(double[] input){
+		grades = input;
+	}
+
+	//set method
+	public void setGrades(double [] input){
+		grades = input;
+	}
+
+
+	private double getSum()
+	{
+		double sum=0.0;
+		for (int i = 0; i < grades.length; i++){
+			sum += grades[i];
+		}
+		return sum;
+	}
+
+	public double getAverage()
+	{
+		double average=0.0;
+		average = getSum()/grades.length;
+
+		return average;
+	}
+	
+	public String toString(){
+		/*int [] covered = new int[grades.length];
+		double max;
+		double[] newGrades = new double[grades.length];
+		int index= 0;
+		int counter = 0;
+		for(int j =0; j < grades.length; j++){
+			max = 0;
+			for(int i = 0; i < grades.length; i++){
+				if (grades[i] > max){
+					max = grades[i];
+					index = i;
+				}
+				
+			}
+			counter++;
+			newGrades[counter] = max;
+			covered[counter] = index;
+		}
+		
+		String output = "";
+		for(int i = 0; i < newGrades.length; i++){
+			output = output + newGrades[i];
+		}
+		
+		return "";*/ 
+		String output = "";
+		for (int i = 0; i < grades.length; i++){
+			output = output + "Grade No. " + i + ": " + grades[i] + "\n";
+		}
+	}
+
+	//toString method
+
+
+
+}
