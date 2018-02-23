@@ -23,5 +23,12 @@ public class DeckTester {
 		int[] vvv = {2, 1};
 		Deck ddd = new Deck(rrr, sss, vvv);
 		System.out.println(ddd);
+		String[] rank = {"Ace", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Jack", "Queen", "King"};
+		String[] suit = {"Spade", "Heart", "Diamond", "Clubs"};
+		int[] value = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
+		Deck standard = new Deck(rank, suit, value);
+		System.out.println(standard);
+		standard.shuffle();
+		System.out.println(standard);
 	}
 }
