@@ -119,6 +119,16 @@ public class RomanNumeral
 
 	public String toString()
 	{
+		roman = "";
+		for(int i = 0; i < NUMBERS.length;){
+			if (number >= NUMBERS[i]){
+				roman = roman + LETTERS[i];
+				number = number - NUMBERS[i];
+			}
+			else{
+				i++;
+			}
+		}
 		return roman + "\n";
 	}
 }

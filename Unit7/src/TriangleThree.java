@@ -37,7 +37,7 @@ public class TriangleThree
 	public String toString()
 	{
 		String output="";
-		for (int i = 1; i < size+1; i++){
+		for (int i = 1; i <= size; i++){
 			for (int j = 0; j < size -i; j++)
 				output = output + " ";
 			for (int k = 0; k < i; k++)

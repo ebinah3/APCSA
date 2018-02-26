@@ -69,7 +69,7 @@ public class Card {
 	 *         false otherwise.
 	 */
 	public boolean matches(Card otherCard) {
-		if ((otherCard.suit == suit) && (otherCard.rank == rank))
+		if (otherCard.suit().equals(this.suit()) && otherCard.rank().equals(this.rank()) && otherCard.pointValue() == this.pointValue())
 			return true;
 		return false;
 	}
