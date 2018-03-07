@@ -29,8 +29,6 @@ public class Grades
 		if(s.hasNext()){
 			grades = new double[s.nextInt()];
 		}
-		else 
-			grades = new double[0];
 		int i =0;
 		s.next();
 		while(s.hasNext()){
@@ -83,7 +81,7 @@ public class Grades
 	{
 		String output= "";
 		for(int i = 0; i < grades.length; i++){
-			output = output + grades[i] + " ";
+			output = output + grades[i];
 		}
 
 

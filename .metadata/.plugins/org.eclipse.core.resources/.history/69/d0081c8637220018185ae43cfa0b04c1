@@ -111,10 +111,8 @@ public class Class
 	
 	public String toString()
 	{
-		String output=""+getClassName();
-		for(int i = 0; i<studentList.length; i++){
-			output += "\n" + studentList[i] + "\t" + getStudentAverage(i) ;
-		}
+		String output=""+getClassName()+"\n";
+
 
 
 

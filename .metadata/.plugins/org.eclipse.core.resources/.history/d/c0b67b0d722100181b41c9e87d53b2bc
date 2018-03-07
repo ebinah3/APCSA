@@ -31,7 +31,9 @@ public class MadLib
 	public MadLib(String fileName)
 	{
 		//load stuff
-		this();
+		verbs = new ArrayList<String>();
+		nouns = new ArrayList<String>();
+		adjectives = new ArrayList<String>();
 		loadNouns();
 		loadVerbs();
 		loadAdjectives();
@@ -58,6 +60,10 @@ public class MadLib
 				nouns.add(file.nextLine());
 			}
 			
+		
+		
+		
+		
 		}
 		catch(Exception e)
 		{
@@ -72,6 +78,8 @@ public class MadLib
 			while(file.hasNextLine()){
 				verbs.add(file.nextLine());
 			}
+	
+	
 	
 		}
 		catch(Exception e)
