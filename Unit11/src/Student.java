@@ -58,7 +58,7 @@ public class Student
 	
 	public double getAverage()
 	{
-		return getSum()/getNumGrades();
+		return getSum()/(double)getNumGrades();
 	}
 
 	public double getAverageMinusLow()
@@ -74,6 +74,19 @@ public class Student
 	public double getLowGrade()
 	{
 		return myGrades.getLowGrade();	
+	}
+	
+	public boolean equals(Student s){
+		if(this.getAverage()==s.getAverage())
+			return true;
+		return false;
+	}
+	
+	public boolean compareTo(Student s){
+		if(this.getAverage()<s.getAverage()){
+			return true;
+		}
+		return false;
 	}
 	
 	public String toString()
