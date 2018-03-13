@@ -135,7 +135,7 @@ public class Class
 		return output;
 	}
 	public void sort(){
-		Student[] g = new Student[studentList.length];
+		/*Student[] g = new Student[studentList.length];
 		int index = 0;
 		int [] indexlist = new int[studentList.length];
 		double min = Double.MAX_VALUE;
@@ -148,26 +148,19 @@ public class Class
 						min = getStudentAverage(i);
 						index = i+1;
 					}
-					//else if (i == 0)
 					
 				}
 			}
-			/*if (check(g, max) == false){
-				g[counter] = max;
-				counter++;
-				if (counter == grades.length) 
-					break;
-			}*/
-			//if (check(indexlist, index) == false){
+
 				indexlist[counter] = index;
 				g[counter] = studentList[index-1];
 				counter++;
 				if (counter == studentList.length) 
 					break;
-			//}
 			
 		}
-		studentList=g;
+		studentList=g;*/
+		Arrays.sort(studentList);
 	}
 	public boolean check(int [] d, int c){
 		for (int i = 0; i< d.length; i++){
@@ -177,55 +170,11 @@ public class Class
 		}
 		return false;
 	}
-/*	public void sorts(){
-		int c = 0;
-		//Student s = new Student();
-		while(true){
-			c = 0;
-			for(int i = 0; i < studentList.length-1; i++){
-				if(studentList[i].compareTo(studentList[i+1]) || studentList[i].equals(studentList[i+1])){
-					c++;
-				}
-			}
-			if(c == studentList.length){
-				break;
-			}
 
-			for(int i = 0; i < studentList.length-1; i++){
-				if(!(studentList[i].compareTo(studentList[i+1]) || studentList[i].equals(studentList[i+1]))){
-					ss = "" + studentList[i];
-					for(int j = 0; j<ss.length(); j++){
-						if(ss.charAt(j) == '='){
-							ss = ss.substring(j);
-						}
-					}
-					sss = "" + studentList[i+1];
-					for(int j = 0; j<sss.length(); j++){
-						if(sss.charAt(j) == '='){
-							sss =sss.substring(j);
-						}
-					}
-					//System.out.println(getStudentName(i));
-					//System.out.println(studentList[i].getNumGrades() + " " + ss);
-					ss = studentList[i].getNumGrades() + " " + ss;
-					sss = studentList[i].getNumGrades() + " " + sss;
-					n = getStudentName(i);
-					nn = getStudentName(i+1);
-					//Student s = new Student(getStudentName(i), "" + studentList[i].getNumGrades() + " " + ss);
-					//studentList[i] = studentList[i+1];
-					studentList[i].setGrades(sss);
-					studentList[i].setName(nn);
-					studentList[i+1].setGrades(ss);
-					studentList[i+1].setName(n);
-				}
-			}
-		}
-	}*/
 	
 	public String toString()
 	{
 		sort();
-		//sorts();
 		String output=""+getClassName();
 		for(int i = 0; i<studentList.length; i++){
 			if(getStudentAverage(i)%0.01 >= 0.005)

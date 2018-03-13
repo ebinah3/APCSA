@@ -1,6 +1,6 @@
 package act6;
 
-public class Student6 {
+public class Student6 implements Comparable<Student6>{
 	private String myName;
 	private Grades6 myGrades;
 	
@@ -72,13 +72,16 @@ public class Student6 {
 		return false;
 	}
 	
-	public boolean compareTo(Student6 s){
+	public int compareTo(Student6 s){
 		if(this.getAverage()<s.getAverage()){
-			return true;
+			return -1;
 		}
-		return false;
-	}
+		else if(this.getAverage()==s.getAverage()){
+			return 0;
+		}
+		return 1;
 	
+	}
 	public String toString()
 	{
 		return getName() + " = " + myGrades;

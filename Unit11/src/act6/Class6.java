@@ -2,6 +2,8 @@ package act6;
 
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class Class6 {
 	private String name;
@@ -88,7 +90,7 @@ public class Class6 {
 		return output;
 	}
 	public void sort(){
-		ArrayList<Student6> g = new ArrayList<Student6>();
+		/*ArrayList<Student6> g = new ArrayList<Student6>();
 		int index = 0;
 		ArrayList<Integer> indexlist = new ArrayList<Integer>();
 		double min = Double.MAX_VALUE;
@@ -112,7 +114,8 @@ public class Class6 {
 				break;
 			
 		}
-		studentList=g;
+		studentList=g;*/
+		Collections.sort(studentList);
 	}
 	public boolean check(ArrayList<Integer> d, int c){
 		for (int i: d){

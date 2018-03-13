@@ -1,0 +1,19 @@
+package act6;
+
+import java.util.ArrayList;
+
+public class Gradebook6 {
+	private String name;
+	private ArrayList<Class6> classList;
+	public Gradebook6(){
+		name = "";
+	}
+	public Gradebook6(String n){
+		setName(n);
+	}
+	public void setName(String n){
+		name = n;
+	}
+	
+	
+}
