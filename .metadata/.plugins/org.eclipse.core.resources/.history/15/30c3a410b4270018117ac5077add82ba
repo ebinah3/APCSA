@@ -1,0 +1,32 @@
+package act6;
+
+import static java.lang.System.out;
+
+import java.util.Scanner;
+
+public class GradeBookRunner6 {
+	public static void main( String args[] )
+	   {
+			out.println("Welcome to the Class Stats program!");
+			
+			Scanner keyboard = new Scanner(System.in);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		}		
+}

@@ -31,7 +31,6 @@ public class Grades
 		}
 		else 
 			grades = new double[0];
-		int i =0;
 		if(s.hasNext())
 			s.next();
 		//while(s.hasNext()){
