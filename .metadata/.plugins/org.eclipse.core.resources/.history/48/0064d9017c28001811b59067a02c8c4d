@@ -17,13 +17,13 @@ public class Lab15d
 {
 	public static void main( String args[] ) throws IOException
 	{
-		/*FancyWords f = new FancyWords("");
+		FancyWords f = new FancyWords("");
 		Scanner file = new Scanner(new File("C:\\Users\\ebinah6199\\Desktop\\APCSA\\Unit13\\src\\lab15d.dat"));
 		int i = Integer.parseInt(file.nextLine());
 		/*for(int j = 0; j<i;j++){
 			f.setWords(file.nextLine());
 			System.out.println(f);
-		}
+		}*/
 		
 		FancyWords ff = new FancyWords(file.nextLine());
 		System.out.println(ff);
@@ -62,20 +62,6 @@ public class Lab15d
 		j++;
 		System.out.print("\n");
 		}*/
-		/*Scanner file = new Scanner(new File("C:\\Users\\ebinah6199\\Desktop\\APCSA\\Unit13\\src\\lab15d.dat"));
-		file.nextLine();
-		String s = file.nextLine();
-		System.out.println(s);
-		Scanner sc = new Scanner(s);
-		int i =0;
-		while(sc.hasNext()){
-			i++;
-			//System.out.println(i);
-		}
-		
-*/	
-		
-	
 	}
 }
 

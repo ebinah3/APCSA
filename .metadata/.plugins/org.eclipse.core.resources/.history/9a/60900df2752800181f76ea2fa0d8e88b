@@ -76,7 +76,7 @@ public class Student6 implements Comparable<Student6>{
 		if(this.getAverage()<s.getAverage()){
 			return -1;
 		}
-		else if(equals(s)){
+		else if(this.getAverage()==s.getAverage()){
 			return 0;
 		}
 		return 1;
