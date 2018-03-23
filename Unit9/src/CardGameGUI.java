@@ -306,19 +306,16 @@ public class CardGameGUI extends JFrame implements ActionListener {
 			}
 			repaint();
 		} else if (e.getSource().equals(restartButton)) {
-			board.newGame();
-			getRootPane().setDefaultButton(replaceButton);
-			winMsg.setVisible(false);
-			lossMsg.setVisible(false);
+			
 			//if (!board.anotherPlayIsPossible()) {
 				//signalLoss();
 				//lossMsg.setVisible(true);
-				while(!board.anotherPlayIsPossible()){
+				do{
 					board.newGame();
 					getRootPane().setDefaultButton(replaceButton);
 					winMsg.setVisible(false);
 					lossMsg.setVisible(false);
-				}
+				}while(!board.anotherPlayIsPossible());
 					
 			//s}
 			for (int i = 0; i < selections.length; i++) {

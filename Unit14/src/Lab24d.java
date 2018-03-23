@@ -14,8 +14,12 @@ public class Lab24d
 	public static void main( String args[] ) throws IOException
 	{
 		Scanner file = new Scanner (new File("Lab24d.dat"));
-
-
+		int i = Integer.parseInt(file.nextLine());
+		TicTacToe t = new TicTacToe();
+		for(int j =0; j<i;j++){
+			t.set(file.nextLine());
+			System.out.println(t);
+		}
 
 
 

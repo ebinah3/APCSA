@@ -28,12 +28,19 @@ public class AtCounter
 
 	public int countAts(int r, int c)
 	{
-
+		int count= 0;
+		if(r>=0 && r< atMat.length && c >= 0 && c < atMat[r].length && atMat[r][c] == '@'){
+			count++;
+			atMat[r][c] = '#';
+			count+= countAts(r-1,c);
+			count+= countAts(r+1, c);
+			count+= countAts(r,c-1);
+			count+= countAts(r,c+1);
+		}
+		atCount = count;
 		//add in recursive code to count up the # of @s connected
 		//start checking at spot [r,c]
-
-
-		return 0;
+		return count;
 	}
 
 	public int getAtCount()

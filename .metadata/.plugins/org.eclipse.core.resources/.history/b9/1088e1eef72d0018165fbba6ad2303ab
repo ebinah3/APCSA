@@ -1,0 +1,24 @@
+//© A+ Computer Science  -  www.apluscompsci.com
+//Name -
+//Date -
+//Class -
+//Lab  -
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+import static java.lang.System.*;
+
+public class Lab21i
+{
+	public static void main( String args[] ) throws IOException
+	{
+		int size;
+		String input;
+		Scanner sc = new Scanner("C:\\Users\\ebinah6199\\Desktop\\APCSA\\Unit14\\src\\lab21i.dat");
+		size = sc.nextInt();
+		input = sc.nextLine();
+		Maze m = new Maze(size, input);
+		System.out.println(m);
+	}
+}
