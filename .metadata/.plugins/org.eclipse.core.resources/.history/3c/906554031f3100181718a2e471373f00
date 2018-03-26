@@ -44,11 +44,11 @@ public class NumberSort
 				if(sorted[j]<sorted[min])
 					min =j;
 			}
-			
+			if(i!= min){
 				t = sorted[i];
 				sorted[i]=sorted[min];
 				sorted[min] = t;
-			
+			}
 		}
 		
 		

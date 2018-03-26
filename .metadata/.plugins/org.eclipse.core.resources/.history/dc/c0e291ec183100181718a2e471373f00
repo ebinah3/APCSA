@@ -31,27 +31,36 @@ public class NumberSort
 	public static int[] getSortedDigitArray(int number)
 	{
 		int[] sorted = new int[getNumDigits(number)];
-		
+		int t;
 		for(int i =0; i<getNumDigits(number); i++){
 			sorted[i]=number%10;
 			number/=10;
 		}
-		int t =0;
-		int min;
+		
 		for(int i =0; i<sorted.length; i++){
-			min =i;
-			for(int j =i+1; j<sorted.length; j++){
+			int min =i;
+			for(int j =0; j<sorted.length; j++){
 				if(sorted[j]<sorted[min])
 					min =j;
 			}
-			
+			if(i!= min){
 				t = sorted[i];
 				sorted[i]=sorted[min];
 				sorted[min] = t;
-			
+			}
 		}
 		
 		
+		
+
+
+
+
+
+
+
+
+
 
 		return sorted;
 	}
