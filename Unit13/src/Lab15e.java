@@ -21,12 +21,22 @@ public class Lab15e
 		
 		//test case 2	
 		
+		int[] two = NumberSort.getSortedDigitArray(901912468);
+		for(int item : two)
+		{
+			System.out.print(item + " ");
+		}
+		System.out.println();
+	
+	
+	
 		
-	
-	
-	
-	
-	
+		int[] three = NumberSort.getSortedDigitArray(864213507);
+		for(int item : three)
+		{
+			System.out.print(item + " ");
+		}
+		System.out.println();
 	
 		
 		

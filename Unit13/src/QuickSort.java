@@ -13,41 +13,44 @@ public class QuickSort
 
 	public static void quickSort(Comparable[] list)
 	{
+		//System.out.println("pass " + passCount++ + " " +Arrays.toString(list));
+		quickSort(list, 0, list.length-1);
+		passCount = 0;
 
-
-
-
+		
 	}
 
 
 	private static void quickSort(Comparable[] list, int low, int high)
 	{
-
-
-
-
-
-
-
+		if(low<high){
+			int split = partition(list, low, high);
+			quickSort(list, low, split);
+			
+		    quickSort(list, split+1, high);
+		    System.out.println("pass " + passCount++ + " " +Arrays.toString(list));
+		}
 	}
 
 
 	private static int partition(Comparable[] list, int low, int high)
 	{
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-		return 0;
+		
+		Comparable pivot = list[low];
+		int bot = low-1;
+		int top = high+1;
+		while(bot<top){
+			while(list[--top].compareTo(pivot)>0);
+			while(list[++bot].compareTo(pivot)<0);
+			if(top<=bot)
+				return top;
+			Comparable s = list[bot];
+			list[bot] = list[top];
+			list[top] = s;
+			//passCount++;
+			
+		}
+		
+		return top;
 	}
 }
