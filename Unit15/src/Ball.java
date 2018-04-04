@@ -1,4 +1,3 @@
-//© A+ Computer Science  -  www.apluscompsci.com
 //Name -
 //Date -
 //Class -
@@ -7,88 +6,120 @@
 import java.awt.Color;
 import java.awt.Graphics;
 
-public class Ball extends Block
-{
+public class Ball extends Block {
 	private int xSpeed;
 	private int ySpeed;
 
-	public Ball()
-	{
-		super(200,200);
-		setXS(3);
-		setYS(1);
+	public Ball() {
+		super(200, 200);
+		xSpeed = 3;
+		ySpeed = 1;
 	}
 
-	public Ball(int x, int y){
-		super(x,y);
-		setXS(3);
-		setYS(1);
+	public Ball(int x, int y) {
+		super(200, 200);
+		xSpeed = 3;
+		ySpeed = 1;
 	}
-	public Ball(int x, int y, int w, int h){
-		super(x,y, w, h);
-		setXS(3);
-		setYS(1);
+
+	public Ball(int x, int y, int width, int height) {
+		super(x, y, width, height);
+		xSpeed = 2;
+		ySpeed = 1;
 	}
-	public Ball(int x, int y, int w, int h, Color c){
-		super(x,y, w, h, c);
-		setXS(3);
-		setYS(1);
+
+	public Ball(int x, int y, int width, int height, int xSped, int ySped) {
+		super(x, y, width, height);
+		xSpeed = xSped;
+		ySpeed = ySped;
 	}
-	public Ball(int x, int y, int w, int h, Color c, int xs, int ys){
-		super(x,y, w, h, c);
-		setXS(xs);
-		setYS(ys);
+
+	public Ball(int x, int y, int width, int height, Color col) {
+		super(x, y, width, height, col);
+		xSpeed = 2;
+		ySpeed = 1;
 	}
-	//add the other Ball constructors
-	
-	
-	
-	
-	
-	
-	public void setXS(int x){
-		xSpeed = x;
+
+	public Ball(int x, int y, int width, int height, Color col, int xSped, int ySped) {
+		super(x, y, width, height, col);
+		xSpeed = xSped;
+		ySpeed = ySped;
 	}
-	public void setYS(int y){
-		ySpeed = y;
+
+	// add the other Ball constructors
+	public void setX(int x) {
+		super.setX(x);
 	}
-	
-	public int getXS(){
+
+	public void setY(int y) {
+		super.setY(y);
+	}
+
+	public void setWidth(int width) {
+		super.setY(width);
+	}
+
+	public void setHeight(int height) {
+		super.setY(height);
+	}
+
+	public void setXSpeed(int xSpeedr) {
+		xSpeed = xSpeedr;
+	}
+
+	public void setYSpeed(int ySpeedr) {
+		ySpeed = ySpeedr;
+	}
+	// add the set methods
+
+	public void moveAndDraw(Graphics window) {
+		// draw a white ball at old ball location
+		super.draw(window, Color.white);
+		setX(getX() + xSpeed);
+		setY(getY() + ySpeed);
+		super.draw(window);
+	}
+	// draw the ball at its new location
+
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		} else
+			return false;
+	}
+
+	// add the get methods
+	public int getX() {
+		return super.getX();
+	}
+
+	public int getY() {
+		return super.getY();
+	}
+
+	public int getXSpeed() {
 		return xSpeed;
 	}
-	public int getYS(){
+
+	public int getYSpeed() {
 		return ySpeed;
 	}
-	
-	
-	
-	   
-   //add the set methods
-   
 
-   public void moveAndDraw(Graphics window)
-   {
-   	//draw a white ball at old ball location
-	   draw(window, Color.WHITE);
-
-      setX(getX()+xSpeed);
-		//setY
-      setY(getY()+ySpeed);
-
-		//draw the ball at its new location
-      draw(window);
-   }
-   
-	public boolean equals(Object obj)
-	{
-		if(this == obj)
-			return true;
-		return false;
-	}   
-
-   //add the get methods
-	public String toString(){
-		return super.toString() + " || xSpeed - " + getXS() + " || ySpeed - " + getYS();
+	public int getWidth() {
+		return super.getWidth();
 	}
-   //add a toString() method
+
+	public int getHeight() {
+		return super.getHeight();
+	}
+
+	public Color getColor() {
+		return super.getColor();
+	}
+
+	// add a toString() method
+	public String toString() {
+		return "x - " + getX() + " y - " + getY() + " width - " + getWidth() + " height - " + getHeight() + " Color - "
+				+ getColor() + " xSpeed - " + getXSpeed() + " ySpeed - " + getYSpeed();
+	}
 }

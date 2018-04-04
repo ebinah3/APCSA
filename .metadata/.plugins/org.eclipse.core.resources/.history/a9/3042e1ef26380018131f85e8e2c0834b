@@ -82,36 +82,36 @@ public class Pong extends Canvas implements KeyListener, Runnable {
 			leftScore++;
 		}
 
-		if ((ball.getX() <= leftPaddle.getX() + leftPaddle.getWidth() + Math.abs(ball.getXSpeed()))
+		if ((ball.getX() <= leftPaddle.getX() + leftPaddle.getWidth() + Math.abs(ball.getXS()))
 				&& (ball.getY() >= leftPaddle.getY() && ball.getY() <= leftPaddle.getY() + leftPaddle.getHeight()
 						|| ball.getY() + ball.getHeight() >= leftPaddle.getY()
 								&& ball.getY() + ball.getHeight() < leftPaddle.getY() + leftPaddle.getHeight())) {
-			if (ball.getX() <= leftPaddle.getX() + leftPaddle.getWidth() - Math.abs(ball.getXSpeed()))
-				ball.setYSpeed(-ball.getYSpeed());
+			if (ball.getX() <= leftPaddle.getX() + leftPaddle.getWidth() - Math.abs(ball.getXS()))
+				ball.setYS(-ball.getYS());
 			else
-				ball.setXSpeed(-ball.getXSpeed());
+				ball.setXS(-ball.getXS());
 		}
-		if ((ball.getX() + ball.getWidth() >= rightPaddle.getX() - rightPaddle.getWidth() - Math.abs(ball.getXSpeed()))
+		if ((ball.getX() + ball.getWidth() >= rightPaddle.getX() - rightPaddle.getWidth() - Math.abs(ball.getXS()))
 				&& (ball.getY() >= rightPaddle.getY() && ball.getY() <= rightPaddle.getY() + rightPaddle.getHeight()
 						|| ball.getY() + ball.getHeight() >= rightPaddle.getY()
 								&& ball.getY() + ball.getHeight() < rightPaddle.getY() + rightPaddle.getHeight())) {
 			if (ball.getX() + ball.getWidth() <= rightPaddle.getX() - rightPaddle.getWidth()
-					+ Math.abs(ball.getXSpeed()))
-				ball.setYSpeed(-ball.getYSpeed());
+					+ Math.abs(ball.getXS()))
+				ball.setYS(-ball.getYS());
 			else
-				ball.setXSpeed(-ball.getXSpeed());
+				ball.setXS(-ball.getXS());
 		}
 
 		if (ball.getY() <= 0) {
-			ball.setYSpeed(-ball.getYSpeed());
+			ball.setYS(-ball.getYS());
 		}
 		if (ball.getY() >= 560) {
-			ball.setYSpeed(-ball.getYSpeed());
+			ball.setYS(-ball.getYS());
 		}
 		// see if ball hits left wall or right wall
 		// if (ball.getX() < 10 || ball.getX() > 780) {
-		// ball.setXSpeed(0);
-		// ball.setYSpeed(0);
+		// ball.setXS(0);
+		// ball.setYS(0);
 		// }
 
 		// see if the ball hits the top or bottom wall
@@ -119,13 +119,13 @@ public class Pong extends Canvas implements KeyListener, Runnable {
 		// see if the ball hits the left paddle
 		if (ball.getX() >= 7 && ball.getX() < 17 && ball.getY() < leftPaddle.getY() + 25
 				&& ball.getY() > (leftPaddle.getY() + 125)) {
-			ball.setXSpeed(0);
+			ball.setXS(0);
 		}
 
 		// see if the ball hits the right paddle
 		if (ball.getX() >= 771 && ball.getX() < 781 && ball.getY() <= rightPaddle.getY() + 25
 				&& ball.getY() >= (rightPaddle.getY() + 125)) {
-			ball.setXSpeed(0);
+			ball.setXS(0);
 		}
 		// see if the paddles need to be moved
 		if (keys[0] == true)
